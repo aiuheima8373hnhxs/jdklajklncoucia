@@ -1,0 +1,38 @@
+2.0
+- Poprawiono sesje, są generowane losowo podczas uruchomienia modułu
+- Zmiana nazwy sesji z sessionName na sessionID
+
+1.9
+- Zoptymalizowano pobieranie uprawnień, od teraz uprawnienia pobierają są tylko raz
+
+1.8
+- Zoptymalizowano niektóre funkcje oraz dodano obsługę błędów
+- Usunięto funkcję userList
+- Poprawiono funkcję getUserList oraz getData które taraz pobierają ograniczone dane z bazy
+
+1.7
+- Funkcja blokowania użytkownika (banowanie)
+
+1.6a
+- Poprawiono funkcję _userUnsetHash
+
+1.6
+- Dodano sesje sprawdzającą IP użytkownika (sprawdzanie czy sesja nie została ukradziona po adresie IP)
+- Dodano zabezpieczenie przed ukradnięciem sesji w postacji kontroli hashu użytkownika
+
+1.5
+- Przebudowa modułu
+
+1.4a
+- Dodano do funkcji createUser sprawdzanie błędów SQL
+
+1.4
+- Możliwość zmiany prefixa dla bazy danych
+- Wyłączono automatyczne pobieranie danych uzytkownika, blednie dzialalo z prefixem
+- Dodano czyszczenie błędów
+- Dodano funkcję userList
+
+1.3
+- Dodano sprawdzanie czy użytkownik nie zmienił adresu IP (zabezpieczenie przed ukradnięciem sesji)
+- Z funkcji wylogowania (logoutUser) usunięto sprawdzenie czy użytkownik jest zalogowany
+- Dodano do funkcji userGetData sprawdzenie czy sesje istnieją (użytkownik jest zalogowany)

@@ -1,0 +1,1 @@
+ALTER TABLE `AP_user` ADD `userSessionHash` VARCHAR(32) NULL DEFAULT NULL AFTER `blocked`;

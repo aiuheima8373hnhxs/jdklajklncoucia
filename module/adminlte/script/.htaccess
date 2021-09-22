@@ -1,0 +1,4 @@
+<Files *.png>
+Order deny,allow
+Allow from all
+</Files>

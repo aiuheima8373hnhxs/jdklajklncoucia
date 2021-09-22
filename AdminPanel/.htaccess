@@ -1,0 +1,69 @@
+RewriteEngine On
+
+#global
+RewriteRule ^index.html$ index.php
+RewriteRule ^404.html$ index.php?page=404
+RewriteRule ^page-(.*).html$ index.php?page=$1
+
+#user
+RewriteRule ^user.html$ index.php?page=user.panel
+RewriteRule ^user-(.*).html$ index.php?page=user.panel&userID=$1
+RewriteRule ^userLogout.html$ index.php?page=user.logout
+RewriteRule ^userChangePassword.html$ index.php?page=user.changePassword
+
+#post
+RewriteRule ^post.html$ index.php?page=post
+RewriteRule ^postEdit-(.*).html$ index.php?page=post&id=$1
+RewriteRule ^postAdd.html$ index.php?page=post&id=dodaj
+
+#menu
+RewriteRule ^menu.html$ index.php?page=menu
+RewriteRule ^menuAdd.html$ index.php?page=menu&type=add
+RewriteRule ^menuDelete-(.*).html$ index.php?page=menu&id=$1&type=delete
+RewriteRule ^menuEdit-(.*).html$ index.php?page=menu&id=$1&type=edit
+RewriteRule ^menuPositionUp-(.*).html$ index.php?page=menu&id=$1&type=positionUp
+RewriteRule ^menuPositionDown-(.*).html$ index.php?page=menu&id=$1&type=positionDown
+
+#jumbotron
+RewriteRule ^jumbotron.html$ index.php?page=jumbotron
+
+#siteTemplate
+RewriteRule ^siteTemplate.html$ index.php?page=option.template
+RewriteRule ^siteTemplateActive-(.*).html$ index.php?page=option.template&template=$1
+
+#config
+RewriteRule ^config.html$ index.php?page=option.config
+RewriteRule ^module.html$ index.php?page=option.module [QSA,L]
+RewriteRule ^module-clearCache.html$ index.php?page=option.module&clearInstallerCache=true
+RewriteRule ^module-add.html$ index.php?page=option.module&page2=moduleAdd [QSA,L]
+
+#templateEdit
+RewriteRule ^templateEdit.html$ index.php?page=option.templateEdit
+
+#userAdmin and permission
+RewriteRule ^userAdmin.html$ index.php?page=option.user.list [QSA,L]
+RewriteRule ^createNewUser.html$ index.php?page=option.user.addUser
+RewriteRule ^permission.html$ index.php?page=option.permission.permission
+RewriteRule ^permissionEdit-(.*).html$ index.php?page=option.permission.permission&editID=$1
+RewriteRule ^permissionAdd.html$ index.php?page=option.permission.permission&editID=addNew
+
+#service
+RewriteRule ^FrameworkLibrary.html$ index.php?page=service.library
+RewriteRule ^phpInfo.html$ index.php?page=service.phpinfo
+
+#service logs
+RewriteRule ^logs.html$ index.php?page=service.log
+RewriteRule ^logFile-(.*).html$ index.php?page=service.log&file=$1
+RewriteRule ^logDelete-(.*).html$ index.php?page=service.log&delete=$1
+
+#service module
+RewriteRule ^FrameworkModule.html$ index.php?page=service.module
+RewriteRule ^FrameworkModuleInfo-(.*).html$ index.php?page=service.module&type=info&name=$1
+RewriteRule ^FrameworkModuleAP-(.*).html$ index.php?page=service.module&type=adminpanel&modul=$1 [QSA,L]
+RewriteRule ^FrameworkModuleDebug-(.*).html$ index.php?page=service.module&type=debug&name=$1
+
+#search
+RewriteRule ^search.html$ index.php?page=search [QSA,L]
+
+#widget
+RewriteRule ^widget.html$ index.php?page=widget [QSA,L]
